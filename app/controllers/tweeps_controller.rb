@@ -14,7 +14,7 @@ class TweepsController < ApplicationController
 
   # GET /tweeps/new
   def new
-    @tweep = Tweep.new
+    @tweep = current_user.tweeps.build
   end
 
   # GET /tweeps/1/edit
@@ -23,7 +23,7 @@ class TweepsController < ApplicationController
 
   # POST /tweeps or /tweeps.json
   def create
-    @tweep = Tweep.new(tweep_params)
+    @tweep = current_user.tweeps.build(tweep_params)
 
     respond_to do |format|
       if @tweep.save
