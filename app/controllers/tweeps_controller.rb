@@ -1,6 +1,7 @@
 class TweepsController < ApplicationController
   before_action :set_tweep, only: %i[ show edit update destroy ]
-
+  before_action :authenticate_user!, except: [:index, :show]
+  
   # GET /tweeps or /tweeps.json
   def index
     @tweeps = Tweep.all.order("created_at DESC")
