@@ -33,6 +33,8 @@ gem 'simple_form', '~> 5.1'
 gem 'gravatar_image_tag', '~> 1.2'
 # User Authentication. https://github.com/plataformatec/devise/
 gem 'devise', '~> 4.7', '>= 4.7.3'
+# Font Awesome. https://github.com/bokmann/font-awesome-rails/
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false

@@ -3,7 +3,8 @@ class TweepsController < ApplicationController
 
   # GET /tweeps or /tweeps.json
   def index
-    @tweeps = Tweep.all
+    @tweeps = Tweep.all.order("created_at DESC")
+    @tweep = Tweep.new
   end
 
   # GET /tweeps/1 or /tweeps/1.json
